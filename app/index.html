@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- font awesome cdn -->
+	<script src="https://use.fontawesome.com/80624162cb.js"></script>
+
+	<title>in-class-vue-grid</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h1>Vue Switchable Grid (in class)</h1>
+
+
+<div id="main" v-cloak>
+	<div class="bar">
+		<a v-bind:class="{ 'active': layout == 'grid' }" href="#" v-on:click="layout = 'grid'"><i class="fa fa-th fa-2x" aria-hidden="true"></i></a>
+		<a v-bind:class="{ 'active': layout == 'list' }" href="#" v-on:click="layout = 'list'"><i class="fa fa-list fa-2x" aria-hidden="true"></i></a>
+	</div>
+
+	<!-- stuff here -->
+	<p>the active layous is {{layout}}</p>
+
+</div>
+<!-- vue cdn -->
+<script src="https://unpkg.com/vue"></script>
+<!-- local js scripts -->
+<script src="js/main.js"></script>
+</body>
+</html>
